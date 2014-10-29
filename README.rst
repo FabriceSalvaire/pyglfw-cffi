@@ -80,6 +80,8 @@ This Python package provides a CFFI wrapper for the |GLFW| library.
 GLFW is an Open Source, multi-platform library for creating windows with OpenGL contexts and
 receiving input and events.
 
+Look the file *simple-test.py* to learn how to use the wrapper.
+
 .. End
 .. -*- Mode: rst -*-
 
