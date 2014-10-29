@@ -1,0 +1,13 @@
+.. -*- Mode: rst -*-
+
+=========
+ Testing
+=========
+
+To test the wrapper run this script:
+
+.. code-block:: sh
+
+  python simple-test.py
+
+.. end

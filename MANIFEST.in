@@ -1,0 +1,18 @@
+include	.bzrignore
+include .gitignore
+include LICENSE.txt
+include MANIFEST
+include MANIFEST.in
+include PKG-INFO
+include README.*
+include make-release.sh
+include setenv.sh start.sh
+include setup_data.py
+recursive-include bin *
+recursive-include doc *
+recursive-include gh-pages *
+recursive-include share *
+recursive-include tools *
+recursive-include unit-test *.py
+prune build
+prune doc/sphinx/build

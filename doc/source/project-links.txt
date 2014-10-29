@@ -1,0 +1,33 @@
+.. -*- Mode: rst -*-
+
+.. |ohloh| image:: https://www.openhub.net/accounts/230426/widgets/account_tiny.gif
+   :target: https://www.openhub.net/accounts/fabricesalvaire
+   :alt: Fabrice Salvaire's Ohloh profile
+   :height: 15px
+   :width:  80px
+
+.. |pyglfw-cffi-Url| replace:: http://fabricesalvaire.github.io/pyglfw-cffi
+
+.. |pyglfw-cffi-HomePage| replace:: pyglfw-cffi Home Page
+.. _pyglfw-cffi-HomePage: http://fabricesalvaire.github.io/pyglfw-cffi
+
+.. |pyglfw-cffi-Doc| replace:: pyglfw-cffi Documentation
+.. _pyglfw-cffi-Doc: http://glfw-cffi.readthedocs.org/en/latest
+
+.. |pyglfw-cffi@readthedocs-badge| image:: https://readthedocs.org/projects/glfw-cffi/badge/?version=latest
+   :target: http://glfw-cffi.readthedocs.org/en/latest
+
+.. |pyglfw-cffi@github| replace:: https://github.com/FabriceSalvaire/pyglfw-cffi
+.. .. _pyglfw-cffi@github: https://github.com/FabriceSalvaire/pyglfw-cffi
+
+.. |pyglfw-cffi@readthedocs| replace:: http://glfw-cffi.readthedocs.org
+.. .. _pyglfw-cffi@readthedocs: http://glfw-cffi.readthedocs.org
+
+.. |pyglfw-cffi@pypi| replace:: https://pypi.python.org/pypi/pyglfw-cffi
+.. .. _pyglfw-cffi@pypi: https://pypi.python.org/pypi/pyglfw-cffi
+
+.. |Build Status| image:: https://travis-ci.org/FabriceSalvaire/pyglfw-cffi.svg?branch=master
+   :target: https://travis-ci.org/FabriceSalvaire/glfw-cffi
+   :alt: pyglfw-cffi build status @travis-ci.org
+
+.. End

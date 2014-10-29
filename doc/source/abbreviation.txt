@@ -1,0 +1,24 @@
+.. -*- Mode: rst -*-
+
+.. |Python| replace:: Python
+.. _Python: http://python.org
+
+.. |PyPI| replace:: PyPI
+.. _PyPI: https://pypi.python.org/pypi
+
+.. |Sphinx| replace:: Sphinx
+.. _Sphinx: http://sphinx-doc.org
+
+.. |CFFI| replace:: CFFI
+.. _CFFI: http://cffi.readthedocs.org
+
+.. |OpenGL| replace:: OpenGL
+.. _OpenGL: http://www.opengl.org
+
+.. |pypy| replace:: pypy
+.. _pypy: http://pypy.org
+
+.. |GLFW| replace:: GLFW
+.. _GLFW: http://www.glfw.org
+
+.. End

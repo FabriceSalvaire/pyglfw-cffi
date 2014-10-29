@@ -1,0 +1,47 @@
+.. -*- Mode: rst -*-
+
+.. _installation-page:
+
+==============
+ Installation
+==============
+
+Dependencies
+------------
+
+pyglfw-cffi requires the following dependencies:
+
+ * |Python|_ 2.7
+ * |CFFI|_ 0.8.6
+ * |GLFW|_ 3
+
+Installation from PyPi Repository
+---------------------------------
+
+pyglfw-cffi is made available on the |Pypi|_ repository at |pyglfw-cffi@pypi|
+
+Run this command to install the last release:
+
+.. code-block:: sh
+
+  pip install pyglfw-cffi
+
+Installation from Source
+------------------------
+
+The pyglfw-cffi source code is hosted at |pyglfw-cffi@github|
+
+To clone the Git repository, run this command in a terminal:
+
+.. code-block:: sh
+
+  git clone git@github.com:FabriceSalvaire/pyglfw-cffi.git
+
+Then to build and install pyglfw-cffi run these commands:
+
+.. code-block:: sh
+
+  python setup.py build
+  python setup.py install
+
+.. End
