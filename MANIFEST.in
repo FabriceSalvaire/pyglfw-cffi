@@ -14,5 +14,6 @@ recursive-include gh-pages *
 recursive-include share *
 recursive-include tools *
 recursive-include unit-test *.py
+recursive-include PyGlfwCffi glfw3-api.h
 prune build
 prune doc/sphinx/build
