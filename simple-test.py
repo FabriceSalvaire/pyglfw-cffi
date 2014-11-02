@@ -30,11 +30,16 @@ def on_key(window, key, scancode, action, mods):
     if key == glfw.KEY_ESCAPE and action == glfw.PRESS:
         glfw.set_window_should_close(window, 1)
 
+def error_callback(error, description):
+    raise NameError("{} {}".format(error, description))
+
 ####################################################################################################
 
 # Initialize the library
 if not glfw.init():
     sys.exit()
+
+glfw.set_error_callback(error_callback)
 
 print 'version:', glfw.get_version()
 
@@ -46,6 +51,14 @@ print 'monitor size:', glfw.get_monitor_physical_size(primary_monitor)
 
 for video_mode in glfw.get_video_modes(primary_monitor):
     print 'video mode:', video_mode.width, video_mode.height
+
+glfw.window_hint(glfw.CONTEXT_VERSION_MAJOR, 2)
+glfw.window_hint(glfw.CONTEXT_VERSION_MINOR, 1)
+glfw.window_hint(glfw.CLIENT_API, glfw.OPENGL_API)
+#glfw.window_hint(glfw.OPENGL_PROFILE, glfw.OPENGL_COMPAT_PROFILE)
+#glfw.window_hint(glfw.OPENGL_FORWARD_COMPAT, True)
+#glfw.window_hint(glfw.OPENGL_DEBUG_CONTEXT, True)
+glfw.window_hint(glfw.VISIBLE, True)
 
 # Create a windowed mode window and its OpenGL context
 window = glfw.create_window(640, 480, "Hello World")

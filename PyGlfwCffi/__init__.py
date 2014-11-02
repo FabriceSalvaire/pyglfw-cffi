@@ -158,7 +158,7 @@ set_clipboard_string = _glfw.glfwSetClipboardString
 set_cursor_enter_callback = _glfw.glfwSetCursorEnterCallback
 set_cursor_pos_callback = _glfw.glfwSetCursorPosCallback
 set_cursor_pos = _glfw.glfwSetCursorPos
-set_error_callback = _glfw.glfwSetErrorCallback
+# set_error_callback = _glfw.glfwSetErrorCallback
 set_framebuffer_size_callback = _glfw.glfwSetFramebufferSizeCallback
 set_gamma = _glfw.glfwSetGamma
 set_gamma_ramp = _glfw.glfwSetGammaRamp
@@ -200,21 +200,33 @@ def create_window(width=640, height=480, title="GLFW Window", monitor=_ffi.NULL,
 # Callback decorators
 #
 
+char_callback = _ffi.callback('void (GLFWwindow*, unsigned int)')
+cursor_enter_callback = _ffi.callback('void (GLFWwindow*, int)')
+cursor_pos_callback = _ffi.callback('void (GLFWwindow*, double, double)')
 error_callback = _ffi.callback('void (int, const char*)')
-window_pos_callback = _ffi.callback('void (GLFWwindow*, int, int)')
-window_size_callback = _ffi.callback('void (GLFWwindow*, int, int)')
+frame_buffersize_callback = _ffi.callback('void (GLFWwindow*, int, int)')
+key_callback = _ffi.callback('void (GLFWwindow*, int, int, int, int)')
+monitor_callback = _ffi.callback('void (GLFWmonitor*, int)')
+mouse_button_callback = _ffi.callback('void (GLFWwindow*, int, int, int)')
+scroll_callback = _ffi.callback('void (GLFWwindow*, double, double)')
 window_close_callback = _ffi.callback('void (GLFWwindow*)')
-window_refresh_callback = _ffi.callback('void (GLFWwindow*)')
 window_focus_callback = _ffi.callback('void (GLFWwindow*, int)')
 window_iconify_callback = _ffi.callback('void (GLFWwindow*, int)')
-frame_buffersize_callback = _ffi.callback('void (GLFWwindow*, int, int)')
-mouse_button_callback = _ffi.callback('void (GLFWwindow*, int, int, int)')
-cursor_pos_callback = _ffi.callback('void (GLFWwindow*, double, double)')
-cursor_enter_callback = _ffi.callback('void (GLFWwindow*, int)')
-scroll_callback = _ffi.callback('void (GLFWwindow*, double, double)')
-key_callback = _ffi.callback('void (GLFWwindow*, int, int, int, int)')
-char_callback = _ffi.callback('void (GLFWwindow*, unsigned int)')
-monitor_callback = _ffi.callback('void (GLFWmonitor*, int)')
+window_pos_callback = _ffi.callback('void (GLFWwindow*, int, int)')
+window_refresh_callback = _ffi.callback('void (GLFWwindow*)')
+window_size_callback = _ffi.callback('void (GLFWwindow*, int, int)')
+
+####################################################################################################
+
+_error_callback_wrapper = None
+
+def set_error_callback(func):
+    @error_callback
+    def wrapper(error, description):
+        return func(error, _ffi.string(description))
+    global _error_callback_wrapper
+    _error_callback_wrapper = wrapper
+    _glfw.glfwSetErrorCallback(wrapper)
 
 ####################################################################################################
 # 
