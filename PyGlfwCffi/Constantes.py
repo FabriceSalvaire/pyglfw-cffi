@@ -170,56 +170,56 @@ KEY_MENU               = 348
 KEY_LAST               = KEY_MENU
 
 # mods Modifier key flags
-MOD_SHIFT           = 0x0001
-MOD_CONTROL         = 0x0002
-MOD_ALT             = 0x0004
-MOD_SUPER           = 0x0008
+MOD_SHIFT   = 0x0001
+MOD_CONTROL = 0x0002
+MOD_ALT     = 0x0004
+MOD_SUPER   = 0x0008
 
 # buttons Mouse buttons
-MOUSE_BUTTON_1         = 0
-MOUSE_BUTTON_2         = 1
-MOUSE_BUTTON_3         = 2
-MOUSE_BUTTON_4         = 3
-MOUSE_BUTTON_5         = 4
-MOUSE_BUTTON_6         = 5
-MOUSE_BUTTON_7         = 6
-MOUSE_BUTTON_8         = 7
-MOUSE_BUTTON_LAST      = MOUSE_BUTTON_8
-MOUSE_BUTTON_LEFT      = MOUSE_BUTTON_1
-MOUSE_BUTTON_RIGHT     = MOUSE_BUTTON_2
-MOUSE_BUTTON_MIDDLE    = MOUSE_BUTTON_3
+MOUSE_BUTTON_1      = 0
+MOUSE_BUTTON_2      = 1
+MOUSE_BUTTON_3      = 2
+MOUSE_BUTTON_4      = 3
+MOUSE_BUTTON_5      = 4
+MOUSE_BUTTON_6      = 5
+MOUSE_BUTTON_7      = 6
+MOUSE_BUTTON_8      = 7
+MOUSE_BUTTON_LAST   = MOUSE_BUTTON_8
+MOUSE_BUTTON_LEFT   = MOUSE_BUTTON_1
+MOUSE_BUTTON_RIGHT  = MOUSE_BUTTON_2
+MOUSE_BUTTON_MIDDLE = MOUSE_BUTTON_3
 
 # joysticks Joysticks
-JOYSTICK_1             = 0
-JOYSTICK_2             = 1
-JOYSTICK_3             = 2
-JOYSTICK_4             = 3
-JOYSTICK_5             = 4
-JOYSTICK_6             = 5
-JOYSTICK_7             = 6
-JOYSTICK_8             = 7
-JOYSTICK_9             = 8
-JOYSTICK_10            = 9
-JOYSTICK_11            = 10
-JOYSTICK_12            = 11
-JOYSTICK_13            = 12
-JOYSTICK_14            = 13
-JOYSTICK_15            = 14
-JOYSTICK_16            = 15
-JOYSTICK_LAST          = JOYSTICK_16
+JOYSTICK_1    = 0
+JOYSTICK_2    = 1
+JOYSTICK_3    = 2
+JOYSTICK_4    = 3
+JOYSTICK_5    = 4
+JOYSTICK_6    = 5
+JOYSTICK_7    = 6
+JOYSTICK_8    = 7
+JOYSTICK_9    = 8
+JOYSTICK_10   = 9
+JOYSTICK_11   = 10
+JOYSTICK_12   = 11
+JOYSTICK_13   = 12
+JOYSTICK_14   = 13
+JOYSTICK_15   = 14
+JOYSTICK_16   = 15
+JOYSTICK_LAST = JOYSTICK_16
 
 ####################################################################################################
 
 # errors Error codes
-NOT_INITIALIZED        = 0x00010001
-NO_CURRENT_CONTEXT     = 0x00010002
-INVALID_ENUM           = 0x00010003
-INVALID_VALUE          = 0x00010004
-OUT_OF_MEMORY          = 0x00010005
-API_UNAVAILABLE        = 0x00010006
-VERSION_UNAVAILABLE    = 0x00010007
-PLATFORM_ERROR         = 0x00010008
-FORMAT_UNAVAILABLE     = 0x00010009
+NOT_INITIALIZED     = 0x00010001
+NO_CURRENT_CONTEXT  = 0x00010002
+INVALID_ENUM        = 0x00010003
+INVALID_VALUE       = 0x00010004
+OUT_OF_MEMORY       = 0x00010005
+API_UNAVAILABLE     = 0x00010006
+VERSION_UNAVAILABLE = 0x00010007
+PLATFORM_ERROR      = 0x00010008
+FORMAT_UNAVAILABLE  = 0x00010009
 
 ####################################################################################################
 
@@ -257,11 +257,11 @@ OPENGL_PROFILE         = 0x00022008
 OPENGL_API             = 0x00030001
 OPENGL_ES_API          = 0x00030002
 
-NO_ROBUSTNESS          =          0
+NO_ROBUSTNESS          = 0
 NO_RESET_NOTIFICATION  = 0x00031001
 LOSE_CONTEXT_ON_RESET  = 0x00031002
 
-OPENGL_ANY_PROFILE     =          0
+OPENGL_ANY_PROFILE     = 0
 OPENGL_CORE_PROFILE    = 0x00032001
 OPENGL_COMPAT_PROFILE  = 0x00032002
 
