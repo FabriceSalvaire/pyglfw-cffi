@@ -18,6 +18,12 @@
 # 
 ####################################################################################################
 
+####################################################################################################
+
+import six
+
+####################################################################################################
+
 import sys
 
 import PyGlfwCffi as glfw
@@ -41,16 +47,16 @@ if not glfw.init():
 
 glfw.set_error_callback(error_callback)
 
-print 'version:', glfw.get_version()
+six.print_('version:', glfw.get_version())
 
 primary_monitor = glfw.get_primary_monitor()
 # or
 monitors = glfw.get_monitors()
 primary_monitor = monitors[0]
-print 'monitor size:', glfw.get_monitor_physical_size(primary_monitor)
+six.print_('monitor size:', glfw.get_monitor_physical_size(primary_monitor))
 
 for video_mode in glfw.get_video_modes(primary_monitor):
-    print 'video mode:', video_mode.width, video_mode.height
+    six.print_('video mode:', video_mode.width, video_mode.height)
 
 glfw.window_hint(glfw.CONTEXT_VERSION_MAJOR, 2)
 glfw.window_hint(glfw.CONTEXT_VERSION_MINOR, 1)

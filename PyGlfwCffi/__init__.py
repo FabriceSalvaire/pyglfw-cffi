@@ -20,6 +20,11 @@
 
 ####################################################################################################
 
+import six
+from six.moves import xrange
+
+####################################################################################################
+
 import os as _os
 import re
 
@@ -77,7 +82,7 @@ def _init():
             if match:
                 camel_case_function = match.group(1)
                 function = camel_case_re.sub( r'_\1', camel_case_function).lower()
-                print '{} = _glfw.glfw{}'.format(function, camel_case_function)
+                six.print_('{} = _glfw.glfw{}'.format(function, camel_case_function))
             
 _init()
 
@@ -193,7 +198,7 @@ def create_window(width=640, height=480, title="GLFW Window", monitor=_ffi.NULL,
     # if monitor is None:
     #     monitor = _ffi.NULL
     # monitor = ffi.cast('void *', monitor)
-    return _glfw.glfwCreateWindow(width, height, title, monitor, share)
+    return _glfw.glfwCreateWindow(width, height, title.encode('utf-8'), monitor, share)
 
 ####################################################################################################
 #
