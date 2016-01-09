@@ -55,11 +55,13 @@ def read(file_name):
     doc_path = os.path.join(source_path, 'doc', 'source')
 
     # Read and merge includes
-    with open(absolut_file_name) as f:
-        lines = f.readlines()
-    text = merge_include(lines, doc_path)
-
-    return text
+    try:
+        with open(absolut_file_name) as f:
+            lines = f.readlines()
+        text = merge_include(lines, doc_path)
+        return text
+    except FileNotFoundError:
+        return ''
 
 ####################################################################################################
 
