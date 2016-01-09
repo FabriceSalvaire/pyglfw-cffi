@@ -110,11 +110,11 @@ elif os.name == "posix":
         finally:
             try:
                 os.unlink(ccout)
-            except OSError, e:
+            except OSError as e:
                 if e.errno != errno.ENOENT:
                     raise
         if rv == 10:
-            raise OSError, 'gcc or cc command not found'
+            raise OSError('gcc or cc command not found')
         res = re.search(expr, trace)
         if not res:
             return None
@@ -173,7 +173,7 @@ elif os.name == "posix":
                     nums.insert(0, int(parts.pop()))
             except ValueError:
                 pass
-            return nums or [ sys.maxint ]
+            return nums or [ sys.maxsize ]
 
         def find_library(name):
             ename = re.escape(name)
