@@ -1,5 +1,5 @@
 ####################################################################################################
-# 
+#
 # pyglfw-cffi - A Python Wrapper for GLFW.
 # Copyright (C) 2014 Fabrice Salvaire
 #
@@ -7,15 +7,15 @@
 # it under the terms of the GNU General Public License as published by
 # the Free Software Foundation, either version 3 of the License, or
 # (at your option) any later version.
-# 
+#
 # This program is distributed in the hope that it will be useful,
 # but WITHOUT ANY WARRANTY; without even the implied warranty of
 # MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 # GNU General Public License for more details.
-# 
+#
 # You should have received a copy of the GNU General Public License
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
-# 
+#
 ####################################################################################################
 
 ####################################################################################################
@@ -48,9 +48,9 @@ def _init():
     
     # First if there is an environment variable pointing to the library
     if 'GLFW_LIBRARY' in _os.environ:
-        GLFW_LIBRARY = _os.environ['GLFW_LIBRARY']
-        if _os.path.exists():
-            glfw_library = _os.path.realpath(GLFW_LIBRARY)
+        library_path = _os.path.realpath(_os.environ['GLFW_LIBRARY'])
+        if _os.path.exists(library_path):
+            glfw_library = library_path
     
     # Else, try to find it
     if glfw_library is None:
@@ -63,16 +63,16 @@ def _init():
     # Else, we failed and exit
     if glfw_library is None:
         raise OSError('GLFW library not found')
-
+    
     # Parse header
     api_path = _os.path.join(_os.path.dirname(__file__), 'glfw3-api.h')
     with open(api_path, 'r') as f:
         source = f.read()
     _ffi.cdef(source)
-
+    
     global _glfw
     _glfw = _ffi.dlopen(glfw_library)
-
+    
     if False:
         # Dump the functions
         function_re = re.compile('^.* glfw([A-Za-z]*)\(.*;$')
@@ -83,7 +83,7 @@ def _init():
                 camel_case_function = match.group(1)
                 function = camel_case_re.sub( r'_\1', camel_case_function).lower()
                 six.print_('{} = _glfw.glfw{}'.format(function, camel_case_function))
-            
+
 _init()
 
 ####################################################################################################
@@ -93,7 +93,7 @@ _init()
 
 def _reference_wrapper(func, c_type, number_of_items):
     def wrapper(*args):
-        references = [_ffi.new(c_type + '*') for i in xrange(number_of_items)]
+        references = [_ffi.new(c_type + '*') for i in range(number_of_items)]
         args = list(args) + references
         func(*args)
         return [reference[0] for reference in references]
@@ -234,7 +234,7 @@ def set_error_callback(func):
     _glfw.glfwSetErrorCallback(wrapper)
 
 ####################################################################################################
-# 
+#
 # End
-# 
+#
 ####################################################################################################
