@@ -13,8 +13,14 @@
 
 Written by `Fabrice Salvaire <http://fabrice-salvaire.pagesperso-orange.fr>`_.
 
-..
-  |Build Status|
+.. |Build Status|
+
+|Pypi License|
+|Pypi Python Version|
+
+|Pypi Version|
+|Pypi Format|
+|Pypi Download|
 
 -----
 

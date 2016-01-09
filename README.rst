@@ -32,6 +32,26 @@
    :target: https://travis-ci.org/FabriceSalvaire/glfw-cffi
    :alt: pyglfw-cffi build status @travis-ci.org
 
+.. |Pypi Download| image:: https://img.shields.io/pypi/dm/pyglfw-cffi.svg
+   :target: https://pypi.python.org/pypi/pyglfw-cffi
+   :alt: pyglfw-cffi Download per month
+
+.. |Pypi Version| image:: https://img.shields.io/pypi/v/pyglfw-cffi.svg
+   :target: https://pypi.python.org/pypi/pyglfw-cffi
+   :alt: pyglfw-cffi last version
+
+.. |Pypi License| image:: https://img.shields.io/pypi/l/pyglfw-cffi.svg
+   :target: https://pypi.python.org/pypi/pyglfw-cffi
+   :alt: pyglfw-cffi license
+
+.. |Pypi Format| image:: https://img.shields.io/pypi/format/pyglfw-cffi.svg
+   :target: https://pypi.python.org/pypi/pyglfw-cffi
+   :alt: pyglfw-cffi format
+
+.. |Pypi Python Version| image:: https://img.shields.io/pypi/pyversions/pyglfw-cffi.svg
+   :target: https://pypi.python.org/pypi/pyglfw-cffi
+   :alt: pyglfw-cffi python version
+
 .. End
 .. -*- Mode: rst -*-
 
@@ -68,8 +88,14 @@
 
 Written by `Fabrice Salvaire <http://fabrice-salvaire.pagesperso-orange.fr>`_.
 
-..
-  |Build Status|
+.. |Build Status|
+
+|Pypi License|
+|Pypi Python Version|
+
+|Pypi Version|
+|Pypi Format|
+|Pypi Download|
 
 -----
 
