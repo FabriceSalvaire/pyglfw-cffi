@@ -71,7 +71,7 @@ long_description = read('README.txt')
 
 setup_dict = dict(
     name='pyglfw-cffi',
-    version='0.1.1',
+    version='0.1.2',
     author='Fabrice Salvaire',
     author_email='fabrice.salvaire@orange.fr',
     # description='A Python wrapper for GLFW based on CFFI',
@@ -82,7 +82,7 @@ setup_dict = dict(
     scripts=['simple-test.py'],
     packages=['PyGlfwCffi',
     ],
-    package_data={},
+    package_data={'PyGlfwCffi':['glfw3-api.h']},
     long_description=long_description,
     # cf. http://pypi.python.org/pypi?%3Aaction=list_classifiers
     classifiers=[
